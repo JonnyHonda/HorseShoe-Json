@@ -1,6 +1,6 @@
 {
 	"name": "Chase One",
-	"description":"Turn each light i in forward sequence",
+	"description":"Turn each light in forward sequence",
 	"delay": 1000,
 	"sequence": [{
 		"steps": {
