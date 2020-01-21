@@ -2,7 +2,7 @@
 	"name": "Chase One",
 	"description":"Turn each light in forward sequence",
 	"delay": 1000,
-	"sequence": [{
+	"sequence": {
 		"steps": {
 			"0": [0],
 			"1": [1],
@@ -55,5 +55,5 @@
 			"48": [48],
 			"49": [49]
 		}
-	}]
+	}
 }
