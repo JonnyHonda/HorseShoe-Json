@@ -1,6 +1,6 @@
 {
 	"name": "Chase Shoe By Row Down",
-	"description":"Turn on each row Shoes on in sequence down",
+	"description":"Turn on each row of Shoes on in sequence down",
 	"delay": 1000,
 	"sequence": [{
 		"steps": {
