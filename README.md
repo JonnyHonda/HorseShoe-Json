@@ -3,10 +3,12 @@
 A project to light a Horse Shoe Christmas tree with an Arduino pattern generator.
 
 _Ideas_
+
 Using 50 addressable LED string.
 10 Horseshoes each with 5 LEDs arraged in a pyramid, 4,3,2,1 per row
 
 The Arduino must be able to load a pattern file which will drive the pattern generator
+
 A pattern file example:  
 ```
 {
