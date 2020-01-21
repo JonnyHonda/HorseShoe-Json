@@ -1,5 +1,7 @@
 {
 	"name": "Chase Shoe One",
+	"description":"Turn on all Shoe in one sequence",
+	"delay": 1000,
 	"sequence": [{
 		"steps": {
 			"0": [0, 1, 2, 3, 4],
