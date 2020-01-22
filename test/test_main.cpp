@@ -12,7 +12,7 @@ void test_function_json_pattern(void) {
                        (std::istreambuf_iterator<char>()    ) );
       DeserializationError error = deserializeJson(doc, content);
       const int delay = doc["delay"];
-        TEST_ASSERT_EQUAL(delay,1000);
+      TEST_ASSERT_EQUAL(delay,1000);
       
 }
 
