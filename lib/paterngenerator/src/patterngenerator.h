@@ -1,9 +1,16 @@
+#ifndef ARDUINO
 using namespace std;
+#endif
 #ifndef PATTERNGENERATOR_H
 #define PATTERNGENERATOR_H
 
-#include <string>
-#include <fstream>
+#ifdef ARDUINO
+    #include <Arduino.h>
+    #include <String.h>
+#else
+    #include <string>
+#endif
+// #include <fstream>
 #include "ArduinoJson.h"
 
 class PatternGenerator {
@@ -18,7 +25,8 @@ class PatternGenerator {
     DeserializationError error;
     
     // Load
-        bool load (string filename);
+        //bool load (string filename);
+        bool PatternGenerator::set (string json)
         int get_delay(void);
         string get_name(void);
         string get_description(void);

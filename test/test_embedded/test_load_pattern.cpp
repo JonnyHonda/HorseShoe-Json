@@ -1,5 +1,8 @@
 #include <unity.h>
-#include <string>
+#ifdef ARDUINO
+    #include "Ardiuno.h"
+    #include <String.h>
+#endif
 #include "ArduinoJson.h"
 #include "patterngenerator.h"
 
