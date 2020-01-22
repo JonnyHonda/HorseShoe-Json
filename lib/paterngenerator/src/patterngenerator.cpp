@@ -1,5 +1,5 @@
 #include <patterngenerator.h>
-bool PatternGenerator::load (String filename)
+bool PatternGenerator::load (string filename)
 {
     fstream ifs(filename);
     string json( (istreambuf_iterator<char>(ifs) ),
@@ -12,12 +12,17 @@ bool PatternGenerator::load (String filename)
     return false;
 }
 
-string PatternGenerator::getname(void)
+int PatternGenerator::get_delay(void)
 {
-        return patternJson["name"];   
+    return patternJson["delay"];   
 }
 
-int PatternGenerator::getdelay(void)
+string PatternGenerator::get_name(void)
 {
-        return patternJson["delay"];   
+    return patternJson["name"];     
+}
+
+string PatternGenerator::get_description(void)
+{
+    return patternJson["description"];     
 }
