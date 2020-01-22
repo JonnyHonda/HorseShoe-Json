@@ -1,5 +1,7 @@
 #include <Arduino.h>
 #include "ArduinoJson.h"
+#include <SPI.h>
+#include "SdFs.h"
 
 StaticJsonDocument<300> doc;
 
