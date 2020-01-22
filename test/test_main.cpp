@@ -1,13 +1,19 @@
 #include <unity.h>
 #define ARDUINOJSON_DECODE_UNICODE 1
 #include "ArduinoJson.h"
+#include <fstream>
+#include <string>
+using namespace std;
 
 void test_function_json_pattern(void) {
-    StaticJsonDocument<200> doc;
-    char json[] =
-      "{\"sensor\":\"gps\",\"time\":1351824120,\"data\":[48.756080,2.302038]}";
-      DeserializationError error = deserializeJson(doc, json);
-    TEST_ASSERT_TRUE(true);
+    StaticJsonDocument<512> doc;
+      fstream ifs("./sd_card/shoerow1.json");
+      string content( (std::istreambuf_iterator<char>(ifs) ),
+                       (std::istreambuf_iterator<char>()    ) );
+      DeserializationError error = deserializeJson(doc, content);
+      const int delay = doc["delay"];
+        TEST_ASSERT_EQUAL(delay,1000);
+      
 }
 
 int main(int argc, char **argv) {
