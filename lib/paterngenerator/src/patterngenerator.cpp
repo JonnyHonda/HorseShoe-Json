@@ -1,6 +1,6 @@
 #include <patterngenerator.h>
 
-bool PatternGenerator::set (string json)
+bool PatternGenerator::set_json (char* json)
 {
      error = deserializeJson(patternJson, json);
     if (!error){
@@ -27,12 +27,13 @@ int PatternGenerator::get_delay(void)
     return patternJson["delay"];   
 }
 
-string PatternGenerator::get_name(void)
+void PatternGenerator::get_name(const char *value)
 {
-    return patternJson["name"];     
+    value = patternJson["name"];     
+    
 }
 
-string PatternGenerator::get_description(void)
-{
-    return patternJson["description"];     
-}
+// bool PatternGenerator::get_description(char *description)
+// {
+//     description =  patternJson["description"];     
+// }

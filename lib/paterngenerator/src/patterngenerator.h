@@ -1,15 +1,6 @@
-#ifndef ARDUINO
-using namespace std;
-#endif
 #ifndef PATTERNGENERATOR_H
 #define PATTERNGENERATOR_H
 
-#ifdef ARDUINO
-    #include <Arduino.h>
-    #include <String.h>
-#else
-    #include <string>
-#endif
 // #include <fstream>
 #include "ArduinoJson.h"
 
@@ -26,10 +17,10 @@ class PatternGenerator {
     
     // Load
         //bool load (string filename);
-        bool PatternGenerator::set (string json)
+        bool set_json (char *);
         int get_delay(void);
-        string get_name(void);
-        string get_description(void);
+        void get_name(const char *);
+        // bool get_description(char *description);
 
     private:
         StaticJsonDocument<512> patternJson;
